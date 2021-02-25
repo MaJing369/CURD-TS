@@ -41,6 +41,15 @@ const routes: Array<RouteRecordRaw> = [
           savedPosition: true
         }
       },
+      {
+        path: '/components/draggable',
+        component: () => import(/* webpackChunkName: "components" */ '../views/components/draggable/index.vue'),
+        meta: {
+          title: 'draggable',
+          showLink: false,
+          savedPosition: true
+        }
+      },
     ],
     meta: {
       icon: 'el-icon-menu',

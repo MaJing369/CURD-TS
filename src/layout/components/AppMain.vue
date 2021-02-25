@@ -29,7 +29,7 @@ export default defineComponent({
   min-height: calc(100vh - 50px);
   width: 100%;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 10px;
 }
 .fixed-header + .app-main {
