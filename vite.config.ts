@@ -22,7 +22,7 @@ const viteConfig: UserConfig = {
    * 基本公共路径
    * @default '/'
    */
-  base: process.env.NODE_ENV === "production" ? "./" : VITE_PUBLIC_PATH,
+  base: process.env.NODE_ENV === "production" ? "/manages/" : VITE_PUBLIC_PATH,
   root,
   resolve: {
     alias
@@ -42,6 +42,11 @@ const viteConfig: UserConfig = {
   plugins: [
     vue(),
   ],
+  build: {
+    brotliSize: false,
+    // 消除打包大小超过500kb警告
+    chunkSizeWarningLimit: 800
+  }
 }
 
 export default viteConfig
