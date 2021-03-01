@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router"
+import { createRouter, createWebHistory, createWebHashHistory, RouteRecordRaw } from "vue-router"
 
 import Layout from '../layout/index.vue'
 
@@ -147,7 +147,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
     return new Promise((resolve, reject) => {
